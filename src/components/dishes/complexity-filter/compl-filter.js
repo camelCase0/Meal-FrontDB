@@ -8,32 +8,14 @@ const ComplFilter = ({ onDifficultyFilter, dfilter }) => {
     const cls = id <= dfilter ? "star-filter-active" : "star-filter";
     return (
       <button
+        key={id}
         className="star-filter-button"
         onClick={() => onDifficultyFilter(id)}
       >
-        <lable className={cls}></lable>
+        <span className={cls}></span>
       </button>
     );
   });
-  return (
-    <div class="rating-stars">
-      {elements}
-      {/* <button className="star-filter-button">
-        <lable className="star-filter"></lable>
-      </button>
-      <button className="star-filter-button">
-        <lable className="star-filter"></lable>
-      </button>
-      <button className="star-filter-button">
-        <lable className="star-filter"></lable>
-      </button>
-      <button className="star-filter-button">
-        <lable className="star-filter"></lable>
-      </button>
-      <button className="star-filter-button">
-        <lable className="star-filter"></lable>
-      </button> */}
-    </div>
-  );
+  return <div className="rating-stars">{elements}</div>;
 };
 export default ComplFilter;

@@ -32,7 +32,7 @@ export default class Header extends Component {
         <div className="col-4 col-md-3 col-lg-4 searchdiv">
           <form className="search">
             <button>
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
             </button>
             <input
               type="search"

@@ -9,7 +9,7 @@ export default class ListDif extends Component {
     const a = ["", "", "", "", ""];
     const arr = a.map((el, index) => {
       const clasiks = compl <= index ? "star-none" : "star";
-      return <lable className={clasiks}></lable>;
+      return <span key={index} className={clasiks}></span>;
     });
 
     return <div className="star-div">{arr}</div>;
