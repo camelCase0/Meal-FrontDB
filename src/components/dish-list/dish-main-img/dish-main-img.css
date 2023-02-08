@@ -1,0 +1,28 @@
+.dish-main-img-button {
+  background: none;
+  width: 27vmin;
+  height: 35vmin;
+  padding: 5vmin 0vmin 0vmin 1.5vmin;
+  border: none;
+  position: relative;
+  top: -3vmin;
+}
+
+.dish-main-img-div {
+  background-image: url("https://cutt.ly/i98Yqo6");
+  background-color: white;
+  opacity: 0.5;
+  width: 26.5vmin;
+  height: 34vmin;
+}
+.dish-main-img-p {
+  font-family: Cormorant Infant;
+  font-size: 5vmin;
+  position: relative;
+  top: -30vmin;
+  color: black;
+  font-style: normal;
+}
+.dish-main-img-button a {
+  text-decoration: none;
+}

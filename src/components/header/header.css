@@ -1,0 +1,89 @@
+.header {
+  justify-content: center;
+  width: 100%;
+  max-height: 12rem;
+  margin: auto;
+  display: flex;
+  border-bottom: solid 0.1rem black;
+}
+.hrefmain,
+.hrefdish,
+.hrefprod {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+.hrefmain a,
+.hrefdish a,
+.hrefprod a {
+  padding: 0rem;
+  margin: auto;
+  font-family: Josefin Sans, "Source Sans Pro";
+  font-size: 3vmin;
+  text-decoration: none;
+  color: black;
+}
+.search input {
+  height: 50%;
+  margin-top: 1rem;
+  width: 100%;
+  font-family: Josefin Sans, FontAwesome;
+}
+.butadd {
+  background-color: white;
+  max-height: 50px;
+  text-align: center;
+  justify-content: center;
+  border: solid 0.1rem black;
+  margin: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.header div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  border: solid 0.1rem black;
+  border-radius: 0.5rem;
+  max-height: 3rem;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+}
+.search input,
+.search button {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+.search button {
+  margin-left: 0.25rem;
+}
+.search input {
+  display: flex;
+  margin: auto;
+}
+.butaddp {
+  line-height: 1;
+  justify-content: center;
+  text-align: center;
+  margin: 0rem;
+  font-family: Josefin sans;
+  font-size: 2vmin;
+  font-weight: bold;
+}

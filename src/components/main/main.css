@@ -1,0 +1,94 @@
+* {
+  transition: all 0.2s;
+}
+.main-div-main {
+  background: none;
+  height: 100%;
+}
+.back-img-1 {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  background: no-repeat url("https://cutt.ly/Y98ZuZJ");
+  filter: opacity(25%);
+  background-size: 50vmin;
+  max-width: 100vmin;
+  max-height: 100vmin;
+  width: 100%;
+  height: 100%;
+}
+.back-img-2 {
+  background: no-repeat url("https://cutt.ly/u98LKfI");
+  background-size: 50vmin;
+  filter: opacity(25%);
+  position: absolute;
+  left: 75%;
+  bottom: -20%;
+  max-width: 100vmin;
+  max-height: 100vmin;
+  width: 100%;
+  height: 100%;
+}
+.list-m {
+  height: 100%;
+  max-height: 210vmin;
+  background-position: left;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  max-height: 60vmin;
+  overflow: hidden;
+}
+.main-text h1 {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vmin;
+  line-height: 5vmin;
+  /* identical to box height */
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px #000;
+}
+.main-text p {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vmin;
+  line-height: 48px;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px #000;
+  line-height: 5vmin;
+}
+.main-img img {
+  width: 100%;
+  filter: brightness(40%);
+}
+.main-text {
+  text-align: center;
+  position: absolute;
+  top: 27vmin;
+  width: 100%;
+  color: white;
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vmin;
+}
+.dish-list-main {
+  display: flex;
+  flex-direction: column;
+  padding: 3vmin 0vmin 0vmin 0vmin;
+}
+.dish-list-main h2 {
+  font-family: Cormorant Infant;
+  font-style: normal;
+  font-size: 5vmin;
+  margin-bottom: 0rem;
+  padding-left: 2vmin;
+}

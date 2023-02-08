@@ -1,0 +1,43 @@
+.star-div {
+  margin: 1vmin 0vmin 1vmin 0vmin;
+}
+.star {
+  width: 2vmin;
+  height: 2vmin;
+  background: black;
+  display: inline-flex;
+  margin: 0.5vmin 0.65vmin;
+  transition: all 1s ease 0s;
+  clip-path: polygon(
+    50% 0%,
+    66% 32%,
+    100% 38%,
+    78% 64%,
+    83% 100%,
+    50% 83%,
+    17% 100%,
+    22% 64%,
+    0 38%,
+    34% 32%
+  );
+}
+.star-none {
+  width: 2vmin;
+  height: 2vmin;
+  background-color: white;
+  display: inline-flex;
+  margin: 0.5vmin 0.65vmin;
+  transition: all 1s ease 0s;
+  clip-path: polygon(
+    50% 0%,
+    66% 32%,
+    100% 38%,
+    78% 64%,
+    83% 100%,
+    50% 83%,
+    17% 100%,
+    22% 64%,
+    0 38%,
+    34% 32%
+  );
+}

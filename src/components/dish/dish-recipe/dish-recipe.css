@@ -1,0 +1,19 @@
+.dish-recipe-div {
+  justify-content: start;
+  margin-top: 4vmin;
+}
+.dish-recipe-div h3 {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: #123f0a;
+}
+.dish-recipe {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5vmin;
+  line-height: 120%;
+}

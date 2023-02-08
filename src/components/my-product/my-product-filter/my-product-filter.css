@@ -1,0 +1,34 @@
+.my-product-filter-button {
+  background-color: #e1efe1;
+  width: 7rem;
+  height: 2.5rem;
+  margin-right: 4vmin;
+  margin-top: 1rem;
+  border: none;
+}
+.my-product-filter-button p {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2vmin;
+  text-align: center;
+  color: #123f0a;
+  margin: auto;
+}
+.my-product-filter-button:hover {
+  background-color: white;
+  border: solid 0.3rem black;
+}
+.my-product-filter-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4vmin;
+}
+.my-product-filter {
+  display: flex;
+  flex-wrap: row wrap;
+}
+.my-product-filter-text {
+  margin-top: 1rem;
+}

@@ -1,0 +1,48 @@
+.background-dish {
+  position: absolute;
+  top: 4.7rem;
+  width: 100%;
+  height: 100%;
+  background: no-repeat bottom -5vmin left -20vmin/ 100vmin url("https://cutt.ly/z3tab83"),
+    no-repeat bottom 20vmin right -20vmin/ 50vmin url("https://cutt.ly/V3tdx48");
+  filter: opacity(25%);
+}
+.main-dish {
+  height: 100%;
+}
+.dish {
+  margin: 3vmin 10vmin 2vmin 10vmin;
+}
+.dish-name {
+  justify-content: left;
+  margin-left: 5vmin;
+}
+.dish-name h3 {
+  font-family: "Cormorant Infant";
+  font-weight: 400;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: black;
+}
+.dish-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.try-it {
+  margin-top: 4vmin;
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-weight: bold;
+  font-size: 5vmin;
+}
+.dish-try-it {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}

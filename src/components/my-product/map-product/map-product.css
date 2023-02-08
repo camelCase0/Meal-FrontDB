@@ -1,0 +1,9 @@
+.map-prod {
+  width: 70%;
+  margin: auto;
+  border: solid 0.8rem #e1efe1;
+  overflow: hidden;
+}
+.map-prod a img {
+  width: 100%;
+}

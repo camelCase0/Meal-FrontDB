@@ -1,0 +1,43 @@
+.prod-lu-div {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vmin;
+  border-radius: 10%;
+  margin: 6vmin 3vmin 2vmin 3vmin;
+  text-align: start;
+  justify-content: flex-start;
+}
+.prod-lu-div h3 {
+  background-color: #e1efe1;
+  border-radius: 4vmin 4vmin 0vmin 0vmin;
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5vmin;
+  max-width: 45vmin;
+  margin: 0rem;
+  padding: 3vmin 1vmin 0vmin 1vmin;
+}
+.prod-lu {
+  background-color: #e1efe1;
+  max-width: 45vmin;
+  padding: 0vmin 1vmin 3vmin 7vmin;
+  border-radius: 0vmin 0vmin 4vmin 4vmin;
+  justify-content: start;
+  text-align: start;
+  list-style-image: url(/src/components/kitchen-set-solid.svg);
+}
+.prod-li {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vmin;
+  color: black;
+}
+.prod-li-yes {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vmin;
+  color: #0aec21;
+}

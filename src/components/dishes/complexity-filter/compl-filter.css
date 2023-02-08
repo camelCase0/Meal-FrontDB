@@ -1,0 +1,52 @@
+.star-filter {
+  width: 2vmin;
+  height: 2vmin;
+  background: white;
+  display: inline-flex;
+  margin: 0.5vmin 0.65vmin;
+  transition: all 1s ease 0s;
+  clip-path: polygon(
+    50% 0%,
+    66% 32%,
+    100% 38%,
+    78% 64%,
+    83% 100%,
+    50% 83%,
+    17% 100%,
+    22% 64%,
+    0 38%,
+    34% 32%
+  );
+}
+.star-filter-active {
+  width: 2vmin;
+  height: 2vmin;
+  background: black;
+  display: inline-flex;
+  margin: 0.5vmin 0.65vmin;
+  transition: all 1s ease 0s;
+  clip-path: polygon(
+    50% 0%,
+    66% 32%,
+    100% 38%,
+    78% 64%,
+    83% 100%,
+    50% 83%,
+    17% 100%,
+    22% 64%,
+    0 38%,
+    34% 32%
+  );
+}
+.star-filter:hover {
+  background: black;
+}
+.star-filter-button {
+  border: none;
+  border-radius: 30%;
+  background: #e1efe1;
+  margin: 0vmin 0.5vmin 0vmin 0.5vmin;
+}
+.rating-stars {
+  margin: 0vmin 4vmin;
+}

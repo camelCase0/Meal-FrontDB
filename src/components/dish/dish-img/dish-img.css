@@ -1,0 +1,8 @@
+.dish-img {
+  display: flex;
+  width: 55vmin;
+  height: 55vmin;
+}
+.dish-img img {
+  border-radius: 10%;
+}

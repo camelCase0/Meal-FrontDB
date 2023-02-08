@@ -1,0 +1,8 @@
+.dish-main-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.dish-main-list-item {
+  list-style-type: none;
+}
