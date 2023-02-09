@@ -4,6 +4,8 @@ import DishItem from "./dish-item/dish-item";
 import { withData } from "../hoc-helpers";
 import "./dish-list.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
+import compose from "../hoc-helpers/compose";
+import withMealService from "../hoc-helpers/with-meal-service";
 
 // const canCook = ({ receipts }) => {
 //   receipts.forEach((el) => {
@@ -60,5 +62,7 @@ const DishList = ({
     </ErrorBoundry>
   );
 };
-const { getMeal } = new MealService();
-export default withData(DishList, getMeal);
+const mapMealListToProps = (mealService) => {
+  return { getData: mealService.getMeal };
+};
+export default withMealService(mapMealListToProps)(withData(DishList));

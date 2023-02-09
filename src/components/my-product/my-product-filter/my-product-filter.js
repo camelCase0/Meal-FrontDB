@@ -24,6 +24,7 @@ export default class MyProdFilter extends Component {
     const res = arr.map((name) => {
       return (
         <button
+          key={name}
           className="my-product-filter-button"
           onClick={() => onSetFilter(name)}
         >

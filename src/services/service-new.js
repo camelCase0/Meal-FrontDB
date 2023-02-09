@@ -130,35 +130,3 @@ export default class MealService {
     return res;
   };
 }
-
-// serv = new MealService();
-// const DataIngredient = {
-//   name: "String",
-//   image: "String",
-//   category: "Vegetables",
-//   stored_amount: 2,
-//   measure: "pieces",
-//   expiry_date: "2023-02-06",
-// };
-// const DataMeal = {
-//   id: 0,
-//   name: "string",
-//   image: "string",
-//   receipt: "string",
-//   difficulty: 5,
-// };
-// const DataReceipt = [
-//   {
-//     ingredient_id: 0,
-//     amount: 0,
-//   },
-// ];
-
-//serv.getIngredient().then((data)=>console.log(data))
-//serv.putIngredient(0, DataIngredient).then((data)=> console.log(data))
-//serv.getIngredientById(0).then((data)=>console.log(data))
-
-//serv.getFriedge().then((data) => console.log(data))
-//serv.postMeal(DataMeal).then((data) => console.log(data))
-//serv.getMeal().then((data) => console.log(data))
-//serv.deleteMeal(0).then((data) => console.log(data))

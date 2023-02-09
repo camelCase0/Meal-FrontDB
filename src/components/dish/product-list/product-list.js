@@ -6,7 +6,7 @@ const ProdLi = ({ products }) => {
   const elements = products.map(({ name, amount, measure, stored_amount }) => {
     const cls = amount >= stored_amount ? "prod-li" : "prod-li-yes";
     return (
-      <li className={cls}>
+      <li key={name} className={cls}>
         <span>
           {name} {amount} {measure}
         </span>

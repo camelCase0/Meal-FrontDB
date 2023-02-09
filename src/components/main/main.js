@@ -1,6 +1,7 @@
 import React from "react";
 import DishList from "../dish-list";
 import DishMainImg from "../dish-list/dish-main-img/dish-main-img";
+import ErrorBoundry from "../error-boundry/error-boundry";
 import "./main.css";
 
 const Main = () => {
@@ -22,7 +23,9 @@ const Main = () => {
         <div className="col-1 col-sm-1 col-md-2 col-lg-2"></div>
         <div className="col-10 col-sm-10 col-md-8 col-lg-8 dish-list-main">
           <h2>Meal of the week</h2>
-          <DishList num={7} view={<DishMainImg />} />
+          <ErrorBoundry>
+            <DishList num={7} view={<DishMainImg />} />
+          </ErrorBoundry>
         </div>
         <div className="col-1 col-sm-1 col-md-2 col-lg-2"></div>
       </div>
