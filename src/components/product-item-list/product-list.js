@@ -6,7 +6,6 @@ import "./product-list.css";
 import withMealService from "../hoc-helpers/with-meal-service";
 
 const ProductList = ({ data, filter, onUpdateProduct }) => {
-  console.log(data);
   const elements = data.map((item) => {
     const { ingredient_id } = item;
     return (

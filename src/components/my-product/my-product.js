@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import MapProd from "./map-product/map-product";
 import MyProdFilter from "./my-product-filter";
 import "./my-product.css";
+import withMealService from "../hoc-helpers/with-meal-service";
 
 class MyProd extends Component {
   state = {
@@ -12,24 +13,8 @@ class MyProd extends Component {
     this.setState({ filter });
   };
   onUpdateProduct = (e, item) => {
-    const {
-      ingredient_id,
-      name,
-      measure,
-      ingredient_image,
-      expiry_date,
-      category,
-    } = item;
-
-    const data = {
-      name: name,
-      image: ingredient_image,
-      category: category,
-      stored_amount: e.target.amount.value,
-      measure: measure,
-      expiry_date: expiry_date,
-    };
-    // putIngredient(ingredient_id, data);
+    item.stored_amount = e.target.amount.value;
+    this.props.putIngredient(item.ingredient_id, item);
     e.preventDefault();
   };
 
@@ -49,11 +34,14 @@ class MyProd extends Component {
           <MyProdFilter onSetFilter={this.onSetFilter} />
         </div>
         <div className="my-product-list">
-          <ProductList filter={filter} />
+          <ProductList filter={filter} onUpdateProduct={this.onUpdateProduct} />
         </div>
         <MapProd />
       </div>
     );
   }
 }
-export default MyProd;
+const mapMethodsToProps = (mealService) => {
+  return { putIngredient: mealService.putIngredient };
+};
+export default withMealService(mapMethodsToProps)(MyProd);

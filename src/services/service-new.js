@@ -86,7 +86,10 @@ export default class MealService {
   };
 
   putIngredient = async (id, data) => {
-    const res = await this.putResourse(`/ingredient/${id}`, data);
+    const res = await this.putResourse(
+      `/ingredient/${id}`,
+      this._transformPutIngredient(data)
+    );
     return res;
   };
 
@@ -128,5 +131,23 @@ export default class MealService {
   deleteReceipt = async (id) => {
     const res = await this.deleteResource(`/receipt/${id}`);
     return res;
+  };
+  _transformPutIngredient = (data) => {
+    const {
+      name,
+      ingredient_image,
+      category,
+      stored_amount,
+      measure,
+      expiry_date,
+    } = data;
+    return {
+      name: name,
+      image: ingredient_image,
+      category: category,
+      stored_amount: stored_amount,
+      measure: measure,
+      expiry_date: expiry_date,
+    };
   };
 }
