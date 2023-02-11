@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 import "./header.css";
+import SearchBar from "./search-bar";
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
     const { searchItems } = this.props;
     return (
@@ -30,19 +30,11 @@ export default class Header extends Component {
           </button>
         </div>
         <div className="col-4 col-md-3 col-lg-4 searchdiv">
-          <form className="search">
-            <button>
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <input
-              type="search"
-              placeholder="Start typing.."
-              onChange={(e) => searchItems(e.target.value)}
-            ></input>
-          </form>
+          <SearchBar searchItems={searchItems} />
         </div>
         <div className="col-0 col-md-1 col-lg-2"></div>
       </div>
     );
   }
 }
+export default Header;

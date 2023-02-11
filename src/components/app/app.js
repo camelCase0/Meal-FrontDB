@@ -37,7 +37,7 @@ export default class App extends Component {
                     element={<Dishes search={search} />}
                   />
                   <Route path="/fridge" element={<MyProd />} />
-                  <Route path="/dishes/:id" element={<DishWraper />} />
+                  <Route exact path="/dishes/:id" element={<DishWraper />} />
                 </Routes>
               </ScrollToTop>
               <Footer />
