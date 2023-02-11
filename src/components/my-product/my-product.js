@@ -1,10 +1,7 @@
+import ProductList from "../product-item-list/product-list";
 import React, { Component } from "react";
-import MealService from "../../services/service-new";
-import { withData } from "../hoc-helpers";
-import MyProdFilter from "./my-product-filter/my-product-filter";
-import ProdItem from "./product-item";
 import MapProd from "./map-product/map-product";
-
+import MyProdFilter from "./my-product-filter";
 import "./my-product.css";
 
 class MyProd extends Component {
@@ -23,6 +20,7 @@ class MyProd extends Component {
       expiry_date,
       category,
     } = item;
+
     const data = {
       name: name,
       image: ingredient_image,
@@ -31,25 +29,12 @@ class MyProd extends Component {
       measure: measure,
       expiry_date: expiry_date,
     };
-    putIngredient(ingredient_id, data);
+    // putIngredient(ingredient_id, data);
     e.preventDefault();
   };
 
   render() {
-    const { data } = this.props;
-    const elements = data.map((item) => {
-      const { ingredient_id } = item;
-      return (
-        <li key={ingredient_id} className="dish-main-list-item">
-          <ProdItem
-            filter={this.state.filter}
-            item={item}
-            onUpdateProduct={this.onUpdateProduct}
-          />
-        </li>
-      );
-    });
-
+    const { filter } = this.state;
     return (
       <div className="my-product-div">
         <div className="my-product-div-img-text">
@@ -63,12 +48,12 @@ class MyProd extends Component {
         <div className="filter-product">
           <MyProdFilter onSetFilter={this.onSetFilter} />
         </div>
-        <div className="my-product-list">{elements}</div>
+        <div className="my-product-list">
+          <ProductList filter={filter} />
+        </div>
         <MapProd />
       </div>
     );
   }
 }
-
-const { getIngredient, putIngredient } = new MealService();
-export default withData(MyProd, getIngredient);
+export default MyProd;
