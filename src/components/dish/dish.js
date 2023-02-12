@@ -7,9 +7,12 @@ import MealService from "../../services/service-new";
 
 import "./dish.css";
 import Spinner from "../spiner";
+import { withData } from "../hoc-helpers";
+import withMealService from "../hoc-helpers/with-meal-service";
+import { useParams } from "react-router-dom";
+import DishInfo from "./dish-info";
 
-export default class Dish extends Component {
-  mealService = new MealService();
+class Dish extends Component {
   state = {
     data: null,
   };
@@ -23,30 +26,23 @@ export default class Dish extends Component {
   }
 
   updateItem() {
-    const { itemId } = this.props;
+    const { itemId, getData } = this.props;
     if (!itemId) {
       return;
     }
-    this.mealService.getMealById(itemId).then((data) => {
-      console.log(data);
+    getData(itemId).then((data) => {
       this.setState({ data });
     });
   }
+
   render() {
     const { data } = this.state;
     if (!data) return <Spinner />;
-    const { meal_name, meal_image, receipt, receipts } = data;
+
     return (
       <div className="main-dish">
         <div className="dish">
-          <div className="dish-name">
-            <h3>{meal_name}</h3>
-          </div>
-          <div className="dish-content">
-            <DishImg imgUrl={meal_image} />
-            <ProdLi products={receipts} />
-          </div>
-          <DishRecipe receipt={receipt} />
+          <DishInfo data={data} />
           <h3 className="try-it">Also try it:</h3>
           <div className="dish-try-it">
             <DishList num={3} />
@@ -57,3 +53,8 @@ export default class Dish extends Component {
     );
   }
 }
+
+const mapMethodsToProps = (mealService) => {
+  return { getData: mealService.getMealById };
+};
+export default withMealService(mapMethodsToProps)(Dish);

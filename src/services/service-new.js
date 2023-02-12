@@ -132,6 +132,7 @@ export default class MealService {
     const res = await this.deleteResource(`/receipt/${id}`);
     return res;
   };
+
   _transformPutIngredient = (data) => {
     const {
       name,

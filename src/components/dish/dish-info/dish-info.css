@@ -1,0 +1,17 @@
+.dish-name {
+  justify-content: left;
+  margin-left: 5vmin;
+}
+.dish-name h3 {
+  font-family: "Cormorant Infant";
+  font-weight: 400;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: black;
+}
+.dish-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}

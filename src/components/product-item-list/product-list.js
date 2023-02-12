@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { withData } from "../hoc-helpers";
 import ProdItem from "./product-item";
 
@@ -23,6 +23,6 @@ const ProductList = ({ data, filter, onUpdateProduct }) => {
 };
 
 const mapMethodsToProps = (mealService) => {
-  return { getData: mealService.getIngredient };
+  return { getData: mealService.getFriedge };
 };
 export default withMealService(mapMethodsToProps)(withData(ProductList));
